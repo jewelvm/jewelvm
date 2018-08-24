@@ -1,0 +1,19 @@
+#!/bin/sh
+export CC=i386-mingw32-gcc
+export CFLAGS='-Wall -finline-functions -DNDEBUG'
+export AS=i386-mingw32-as
+export NM=i386-mingw32-nm
+export RANLIB=i386-mingw32-ranlib
+export DLLTOOL='i386-mingw32-dlltool -A -k'
+export OBJDUMP=i386-mingw32-objdump
+../../configure --build=i686-pc-linux --host=i386-mingw32 --with-glasses=../../../glasses "$@"
+if test -s libtool; then
+	sed\
+	-e "s/2)\(.*\)@\(.*\);;/2)\1@\2;; 4)\1\\\\\\\\\\\\\\\$3 \\\\\\\\\\\\\\\$4 @\2; _lt_hint=\\\\\\\\\\\\\`expr 1 + \\\\\\\\\\\\\$_lt_hint\\\\\\\\\\\\\`; echo \\\\\\\\\\\\\"  _\\\\\\\\\\\\\\\$4 \\\\\\\\\\\\\\\$3 \\\\\\\\\\\\\\\$4 @\2;;/"\
+	-e "s/\(\\\\\$CC\)/\1 -mdll/"\
+	-e "s/-mdll \(-o impgen\)/\1.exe/"\
+	-e "s/impgen \\\\/impgen.exe -- \\\\/"\
+	< libtool > libtool.new
+	mv -f libtool.new libtool
+	chmod 775 libtool
+fi

@@ -1,0 +1,5 @@
+#!/bin/sh
+set -x
+rm -f aclocal.m4 compile config.guess config.h.in config.sub configure depcomp install-sh ltmain.sh missing mkinstalldirs
+rm -rf autom4te*.cache
+find -path '*/Makefile.in' -exec rm -f \{\} \;

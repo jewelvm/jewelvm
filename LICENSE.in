@@ -1,0 +1,67 @@
+jewelvm version @VERSION@
+
+Copyright (c) 1998-2004, Rodrigo Augusto Barbato Ferreira.
+All rights reserved.
+
+LICENSE AGREEMENT
+
+By running this software you are consenting to be
+bound by this agreement. If you do not agree to any or all
+of the terms of this agreement, you must stop using this
+software and remove it from your computer.
+
+1. Grant of License
+
+This license grants to you a limited, non-exclusive,
+non-transferable, royalty-free license to use the executable
+code of this software for any purpose, including commercial
+applications, subject to the conditions hereby noticed.
+
+You shall redistribute this software to any third party, as
+long as you include a copy of this license agreement in the
+distribution.
+
+You shall not rent, lease, sell, sublicense, or distribute
+this software if a payment is made in connection with such
+distribution, whether directly or indirectly.
+
+This software modifies and manipulates (sometimes storing
+in secondary memory) the executable code of all content
+accessed through it. It is of your sole responsibility to
+ensure that this behavior complies to the license of use
+grant to you by the applicable content owner. The copyright
+holder disclaims any liability for misuse of content.
+
+The copyright holder reserves himself the right to modify
+this license in any future releases of this software.
+
+All remaining rights are also reserved to the copyright
+holder.
+
+2. Disclaimer of Warranty
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+3. Notes
+
+This software is not public-domain, shareware, and it is not
+protected by a "copyleft" agreement, like any of the GNU
+licenses published by the Free Software Foundation.
+
+Java is a registered trademark of Sun Microsystems, Inc.
+
+--
+For more information concerning the license for the system,
+please contact the author:
+
+Rodrigo Augusto Barbato Ferreira
+rodrigo.ferreira@jewelvm.com
++55-31-9611-3224
+Brazil

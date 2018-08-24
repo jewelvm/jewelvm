@@ -1,0 +1,50 @@
+.\" JEWEL, Java Environment With Enhanced Linkage
+.\" Copyright (c) 1998-2004, Rodrigo Augusto Barbato Ferreira
+.\"
+.TH jeweld 1 "01 January 2004" "version @VERSION@" "Jewel VM Project"
+
+.SH NAME
+jeweld \- jewelvm server
+
+.SH SYNOPSIS
+\fBjeweld\fP [\fB\-options\fP]
+
+.SH DESCRIPTION
+The jeweld tool starts the Jewel Virtual Machine server daemon.
+
+.SH OPTIONS
+.TP
+\fB\-help\fP
+print this message
+.TP
+\fB\-version\fP
+print version number
+.TP
+\fB\-port\fP <port>
+specify port to be used
+.TP
+\fB\-stop\fP
+stop the server daemon
+.TP
+\fB\-J\fP<flag>
+pass a flag directly to the runtime system
+
+.SH SEE ALSO
+.BR jewel (1)
+.TP
+\fIhttp://www.jewelvm.com/\fP
+See the Jewel Virtual Machine Project web site for news on development,
+to download new versions, to report bugs or income your feedback.
+
+.SH AUTHOR
+Rodrigo Ferreira <rodrigo.ferreira@jewelvm.com>
+
+.SH COPYRIGHT
+Copyright (c) 1998-2004, Rodrigo Augusto Barbato Ferreira.
+All rights reserved.
+.PP
+This software is distributed under the terms of a license agreement.
+See the file \fILICENSE\fP in the distribution for full details.
+
+.SH NOTES
+Java is a registered trademark of Sun Microsystems, Inc.

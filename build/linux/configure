@@ -1,0 +1,3 @@
+#!/bin/sh
+export CFLAGS='-Wall -O2 -finline-functions -DNDEBUG'
+../../configure --with-glasses=../../../glasses "$@"

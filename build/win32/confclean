@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -rf config.h config.log config.status libtool Makefile stamp-h1
+rm -rf classes include launcher LICENSE native README runtime

@@ -1,0 +1,8 @@
+#!/bin/sh
+export CC=i386-sun-solaris2.6-gcc
+export CFLAGS='-Wall -O2 -finline-functions -DNDEBUG'
+export AS=i386-sun-solaris2.6-as
+export NM=i386-sun-solaris2.6-nm
+export RANLIB=i386-sun-solaris2.6-ranlib
+export OBJDUMP=i386-sun-solaris2.6-objdump
+../../configure --build=i686-pc-linux --host=i386-sun-solaris2.6 --with-glasses=../../../glasses "$@"

@@ -1,0 +1,53 @@
+.\" JEWEL, Java Environment With Enhanced Linkage
+.\" Copyright (c) 1998-2004, Rodrigo Augusto Barbato Ferreira
+.\"
+.TH jewel 1 "01 January 2004" "version @VERSION@" "Jewel VM Project"
+
+.SH NAME
+jewel \- jewelvm launcher
+
+.SH SYNOPSIS
+\fBjewel\fP [\fB\-jar\fP] [\fB\-options\fP] class/jarfile [args...]
+
+.SH DESCRIPTION
+Command line launcher for the Jewel Virtual Machine.
+
+.SH OPTIONS
+.TP
+\fB\-help\fP
+print this message
+.TP
+\fB\-version\fP
+print version number
+.TP
+\fB\-classpath\fP <path>
+set application classpath
+.TP
+\fB\-D\fP<property>=<value>
+set a system property
+.TP
+\fB\-verbose\fP[:class|gc|jni]
+enable verbose output
+.TP
+\fB\-X\fP<option>
+specify a non-standard option
+
+.SH SEE ALSO
+.BR jeweld (1)
+.TP
+\fIhttp://www.jewelvm.com/\fP
+See the Jewel Virtual Machine Project web site for news on development,
+to download new versions, to report bugs or income your feedback.
+
+.SH AUTHOR
+Rodrigo Ferreira <rodrigo.ferreira@jewelvm.com>
+
+.SH COPYRIGHT
+Copyright (c) 1998-2004, Rodrigo Augusto Barbato Ferreira.
+All rights reserved.
+.PP
+This software is distributed under the terms of a license agreement.
+See the file \fILICENSE\fP in the distribution for full details.
+
+.SH NOTES
+Java is a registered trademark of Sun Microsystems, Inc.

@@ -1,0 +1,174 @@
+jewelvm version @VERSION@
+
+Copyright (c) 1998-2004, Rodrigo Augusto Barbato Ferreira.
+All rights reserved.
+
+READ ME FIRST
+
+See the Jewel Virtual Machine Project web site for news
+on development, to download new versions, to report bugs
+or income your feedback at http://www.jewelvm.com/.
+
+1. Installation
+
+Currently, the jewelvm is provided in installation format
+for most of its supported platforms. For those familiar
+with the Java platform installation is supposed to be
+simple and easy. It should work out of the box.
+Platforms supported are Linux/x86, Win32 and Solaris/x86.
+
+2. Running Applications
+
+The jewelvm allows users to run applications delegating
+link time activities (including JIT compilation) to a
+remote server. So this version of the jewelvm can run in
+two modes: Standalone and Client/Server. In both modes,
+jewelvm uses a secondary memory cache to store repetitive
+link-time contexts to be reused in future execution.
+
+The following command line starts the jewelvm in
+Standalone mode:
+
+  jewel <main-class>
+  
+This command starts the machine using the default cache
+path which is:
+
+  {user-home}/.jewelcache/:{jewelvm-home}/lib/cache/
+
+To modify the default cache path the user must supply
+the following command line parameter:
+
+  jewel -Djewel.vm.cache.path={cache-path} <main-class>
+
+Note that cache path works like the class path, when
+searching for an entry it looks directories from left
+to right. When a new entry needs to be added to the
+cache, it is stored in the first directory from right
+to left that is not write protected.
+Note also that directories in the cache path need to
+exist in other to be used, they are not created
+automatically by the system.
+
+To start the jewelvm in Client mode the user should
+use the following command line:
+
+  jewel -Djewel.vm.cache.proxy={hostname} <main-class>
+
+where {hostname} is the name or IP number of the
+machine running the jewelvm server daemon.
+The server daemon usually listens to default port
+31005. To connect to a server on an alternate port
+the user should use the following command line:
+
+  jewel -Djewel.vm.cache.proxy={hostname}:{port} <main-class>
+
+Note that when specifying a cache proxy the system
+still uses the default cache path locally so that
+whenever it retrieves a new entry from the server
+it is backed up on the client side, minimizing future
+network activity.
+To disable completely the local cache path simply
+issue the following command line:
+
+  jewel -Djewel.vm.cache.path= -Djewel.vm.cache.proxy={hostname} <main-class>
+
+In order to run the system in Client/Server mode the
+user must start the jewelvm daemon on the remote
+machine, this is done by issuing the following
+command line:
+
+  jeweld
+
+To change the default server port use the following
+parameter:
+
+  jeweld -port {port}
+
+To deactivate the server daemon use the following
+parameter:
+
+  jeweld -stop
+
+The cache path for the server daemon works the same
+way as described above. To modify the default value
+you should issue the following command line:
+
+  jeweld -J-Djewel.vm.cache.path={cache-path}
+
+Since the JIT compiler for this version is still
+unoptimized, you may experience long pause times
+regarding JIT activities. You can track JIT
+activity by enabling the verbose mode:
+
+  jewel -Djewel.vm.verbose
+
+IMPORTANT: When running the jewelvm in Client/Server
+mode the data transfered (including machine code)
+is not encrypted and can be maliciously modified
+by someone in the way. We suggest you to map a local
+port to a remote port using a third party secure
+socket implementation.
+
+3. Runtime Library
+
+The jewelvm runs using Glasses as runtime library.
+Glasses is a clean-room implementation of a subset of
+the Java API. The subset of packages provided by Glasses
+is (including current limitations):
+
+Package java.io: some classes are not implemented,
+including the serialization API, and byte/char converters;
+
+Package java.lang: important system classes like Thread
+and ClassLoader need to be reviewed, floating point
+classes are still under development;
+
+Package java.lang.ref: full functional;
+
+Package java.lang.reflect: missing Proxy class;
+
+Package java.net: some classes not fully implemented,
+missing content handlers;
+
+Package java.security: missing implementation of many
+classes;
+
+Package java.security.cert: incomplete;
+
+Package java.util: some classes need to be implemented,
+specially Calendar, TimeZone and part of Collections
+framework.
+
+Package java.util.jar: missing jar file verification;
+
+Package java.util.zip: missing deflate classes;
+
+All remaining packages are not supposed to be supported
+by Glasses, and are not currently planned be packaged with
+the jewelvm. Most of remaining packages can be borrowed
+from the standard Java API implementation and work out of
+the box by modifying the CLASSPATH.
+
+4. Limitations
+
+The jewelvm is currently in alpha stage so some of its
+features are not implemented or still unstable. Also,
+we hope to provide better performance with smaller
+memory footprint in the final version.
+
+If you need a feature currently not supported by jewelvm
+allow us to know, and we can discuss it.
+
+Please, to help us keeping this software as sharp as
+possible, report bugs. If possible include a small
+program that reproduces the bug, so that we can easily
+track it.
+
+5. Notes
+       
+This software is distributed under the terms of a license
+agreement. See the license file in the distribution for
+full details.
+
+Java is a registered trademark of Sun Microsystems, Inc.

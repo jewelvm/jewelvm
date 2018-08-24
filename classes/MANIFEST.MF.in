@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: Java Environment With Enhanced Linkage
+Implementation-Vendor: Jewel VM Project
+Implementation-Version: @VERSION@
